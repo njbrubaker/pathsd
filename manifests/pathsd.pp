@@ -2,7 +2,7 @@
 
 class pathsd::pathsd {
   file {'/etc/paths.d/puppet':
-    ensure  => present,
+    ensure  => file,
     mode    => '0644',
     owner   => 'root',
     group   => 'wheel',
@@ -10,7 +10,7 @@ class pathsd::pathsd {
   }
 
   file {'/etc/paths.d/munki':
-    ensure  => present,
+    ensure  => file,
     mode    => '0644',
     owner   => 'root',
     group   => 'wheel',
