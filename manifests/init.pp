@@ -44,6 +44,6 @@
 #
 class pathsd {
 
-include pathsd::pathsd
+include pathsd
 
 }
