@@ -1,79 +1,26 @@
 # pathsd
 
-#### Table of Contents
-
-1. [Overview](#overview)
-2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with pathsd](#setup)
-    * [What pathsd affects](#what-pathsd-affects)
-    * [Setup requirements](#setup-requirements)
-    * [Beginning with pathsd](#beginning-with-pathsd)
-4. [Usage - Configuration options and additional functionality](#usage)
-5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Development - Guide for contributing to the module](#development)
-
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
-
-## Module Description
-
-If applicable, this section should have a brief description of the technology
-the module integrates with and what that integration enables. This section
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?"
-
-If your module has a range of functionality (installation, configuration,
-management, etc.) this is the time to mention it.
-
-## Setup
-
-### What pathsd affects
-
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
+This is a simple module for managing the entries in /etc/paths.d with Puppet. In OS X, placing a file there will automatically add the contents of that file to your path. For example, a file called 'puppet' that contains the line '/usr/local/bin/puppet' would automatically add '/usr/local/bin/puppet' to your path.
 
 ### Beginning with pathsd
 
-The very basic steps needed for a user to get the module up and running.
+Using this module is very simple. All you have to do is:
 
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
-
-## Usage
-
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+1. Install the module
+2. Add any entries to /manifest/pathsd.pp you'd like to include in your path
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
+More information about how /etc/paths.d works is available from the Mac Developer Library here:
+https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/path_helper.8.html
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Compatible with OS X 10.5 and above.
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+If you'd like to contribute, please create a branch and submit a pull request when your work is ready to merge.
 
-## Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You may also add any additional sections you feel are
-necessary or important to include here. Please use the `## ` header.
